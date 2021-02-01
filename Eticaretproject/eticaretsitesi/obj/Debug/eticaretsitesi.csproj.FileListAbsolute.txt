@@ -1,0 +1,12 @@
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\obj\Debug\eticaretsitesi.csprojAssemblyReference.cache
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\obj\Debug\eticaretsitesi.csproj.CoreCompileInputs.cache
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\bin\Debug\eticaretsitesi.dll.config
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\bin\Debug\eticaretsitesi.dll
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\bin\Debug\eticaretsitesi.pdb
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\bin\Debug\EntityFramework.dll
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\bin\Debug\EntityFramework.xml
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\obj\Debug\eticaretsitesi.csproj.CopyComplete
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\obj\Debug\eticaretsitesi.dll
+C:\Users\Tuğce\source\repos\Eticaretproject\eticaretsitesi\obj\Debug\eticaretsitesi.pdb

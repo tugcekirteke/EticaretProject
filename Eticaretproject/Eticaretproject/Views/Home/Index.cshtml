@@ -1,0 +1,90 @@
+﻿@model List<eticaretsitesi.Entity.Product>
+@{
+    ViewBag.Title = "Index";
+    var IsLogin = (bool)ViewBag.IsLogin;
+}
+
+
+
+<h3>son 5 ürün</h3>
+@{
+    foreach (var item in Model)
+    {
+        <div class="productBox">
+            <p class="title"> @item.Adi</p>
+            <img src="@item.imageUrl" />
+            <p>
+                @item.marka
+            </p>
+            <p>
+                @item.fiyat.ToString("##,## ₺ ")
+            </p>
+            <p>
+                @item.Açıklama
+            </p>
+            <a href="/urun/@item.Adi.Replace(" ", "-")/@item.ID" class="btn btn-success">İncele</a>
+
+
+            @{
+                if (IsLogin)
+                {
+                    <a href="#" data-p.ID="@item.ID" class="btn btn-default addBasket"><i class="fas fa-shopping-basket"></i>Sepete At</a>
+
+                }
+            }
+        </div>
+    }
+}
+<div id="andModal" title="Teşekkürler">
+    ürün sepete atılmıştır. <br />
+<a href="/sepetim" class="btn btn-success">Sepeti Git</a>
+</div>
+<div class="row"></div>
+<style>
+    .productBox {
+        width: 200px;
+        float: left;
+        margin: 10px;
+        border: 2px solid #d78585;
+        padding: 10px;
+    }
+
+        .productBox img {
+            width: 100%;
+        }
+
+        .productBox title {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .productBox p {
+            text-align: center;
+        }
+</style>
+
+@section script{
+    <script type="text/javascript">
+        $(function () {
+            $("#andModal").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $(".addBasket").on("click", function () {
+                var pid = $(this).attr("data-pID");
+                $.post("/Basket/AddProduct?productID=" + pid + "&quantity=1", function (data) {
+                    $("#andModal").dialog("open");
+                });
+                return false;
+            });
+        });
+    </script>
+}

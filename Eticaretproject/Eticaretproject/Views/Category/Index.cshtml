@@ -1,0 +1,52 @@
+﻿@model List<eticaretsitesi.Entity.Product>
+@{
+    ViewBag.Title = "Index";
+    var category = (eticaretsitesi.Entity.Category)ViewBag.category;
+}
+
+
+
+<h3>@category.name KATEGORİSİNDEKİ ÜRÜNLER</h3>
+@{
+    foreach (var item in Model)
+    {
+        <div class="productBox">
+            <p class="title"> @item.Adi</p>
+            <img src="@item.imageUrl" />
+            <p>
+                @item.marka
+            </p>
+            <p>
+                @item.fiyat.ToString("##,## ₺ ")
+            </p>
+            <p>
+                @item.Açıklama
+            </p>
+            <a href="/urun/@item.Adi.Replace(" ","-")/@item.ID" class="btn btn-success">İncele</a>
+            <a href="#" class="btn btn-default"><i class="fas fa-shopping-basket"></i>Sepete At</a>
+        </div>
+    }
+}
+<div class="row"></div>
+<style>
+    .productBox {
+        width: 200px;
+        float: left;
+        margin: 10px;
+        border: 2px solid #d78585;
+        padding: 10px;
+    }
+
+        .productBox img {
+            width: 100%;
+        }
+
+        .productBox title {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .productBox p {
+            text-align: center;
+        }
+</style>
